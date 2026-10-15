@@ -1,0 +1,137 @@
+/**
+ * Preview page and Theme Editor layout styles.
+ */
+
+.preview-layout {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--sf-canvas, #F8FAFC);
+}
+
+.preview-header {
+  height: 64px;
+  background-color: #FFFFFF;
+  border-bottom: 1px solid #E2E8F0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 24px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 1px 2px rgba(15, 23, 42, 0.03);
+}
+
+.preview-header-brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.preview-header-logo {
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  background: #2563EB;
+  color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 16px;
+}
+
+.preview-body {
+  display: flex;
+  flex: 1;
+  max-width: 1440px;
+  width: 100%;
+  margin: 0 auto;
+  gap: 24px;
+  padding: 24px;
+}
+
+.preview-main {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.preview-sidebar {
+  width: 380px;
+  flex-shrink: 0;
+}
+
+.theme-editor-sticky {
+  position: sticky;
+  top: 88px;
+  max-height: calc(100vh - 112px);
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding-right: 4px;
+}
+
+.gallery-section {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.gallery-section-header {
+  border-bottom: 1px solid #E2E8F0;
+  padding-bottom: 8px;
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+}
+
+.gallery-row {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.color-token-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 4px 0;
+}
+
+.color-swatch-picker {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.color-input-native {
+  width: 28px;
+  height: 28px;
+  border: 1px solid #CBD5E1;
+  border-radius: 6px;
+  cursor: pointer;
+  padding: 0;
+  background: transparent;
+}
+
+@media (max-width: 992px) {
+  .preview-body {
+    flex-direction: column-reverse;
+    padding: 16px;
+  }
+
+  .preview-sidebar {
+    width: 100%;
+  }
+
+  .theme-editor-sticky {
+    position: static;
+    max-height: none;
+  }
+}
