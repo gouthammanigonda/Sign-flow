@@ -1,0 +1,22 @@
+/**
+ * SFButton component-local styles.
+ * Only applied for styles that Ant Design's token system cannot satisfy directly,
+ * such as the custom SignFlow subtle variant.
+ */
+
+.sf-button--subtle {
+  background-color: var(--sf-btn-subtle-bg, #EFF6FF) !important;
+  color: var(--sf-btn-subtle-color, #2563EB) !important;
+  border-color: transparent !important;
+}
+
+.sf-button--subtle:hover:not(:disabled) {
+  background-color: #DBEAFE !important;
+  color: #1D4ED8 !important;
+  border-color: transparent !important;
+}
+
+.sf-button--subtle:active:not(:disabled) {
+  background-color: #BFDBFE !important;
+  color: #1E40AF !important;
+}

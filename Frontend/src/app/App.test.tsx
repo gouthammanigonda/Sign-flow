@@ -1,24 +1,26 @@
 /**
- * App smoke test — verifies the foundation shell renders correctly.
+ * App smoke & integration tests for PreviewPage shell.
  */
 import { render, screen } from '@testing-library/react'
 import App from './App'
 
-describe('App', () => {
-  it('renders the heading', () => {
-    render(<App />)
-    expect(screen.getByRole('heading', { name: 'SignFlow UI Kit' })).toBeInTheDocument()
+describe('App Preview Page Integration', () => {
+  beforeEach(() => {
+    localStorage.clear()
   })
 
-  it('renders the primary button', () => {
+  it('renders the SignFlow UI Kit header', () => {
     render(<App />)
-    expect(screen.getByRole('button', { name: 'Primary button' })).toBeInTheDocument()
+    expect(screen.getByText('SignFlow UI Kit')).toBeInTheDocument()
+    expect(screen.getByText('Component Gallery')).toBeInTheDocument()
+    expect(screen.getByText('Live Theme Editor')).toBeInTheDocument()
   })
 
-  it('renders the theme toggle button', () => {
+  it('renders wrapper sections in the gallery', () => {
     render(<App />)
-    expect(
-      screen.getByRole('button', { name: /Switch to alternate primary/ }),
-    ).toBeInTheDocument()
+    expect(screen.getByText('SFButton (SignFlow Wrapper)')).toBeInTheDocument()
+    expect(screen.getByText('SFText (SignFlow Wrapper)')).toBeInTheDocument()
+    expect(screen.getByText('SFCard (SignFlow Wrapper)')).toBeInTheDocument()
+    expect(screen.getByText('Native Ant Design Components (Theme Verified)')).toBeInTheDocument()
   })
 })

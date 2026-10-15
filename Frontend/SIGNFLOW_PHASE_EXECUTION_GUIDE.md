@@ -276,13 +276,13 @@ Update this table as phases are reviewed. Do not mark a phase complete merely be
 
 | Phase | Description                         | Status      | Approval / notes |
 | ----- | ----------------------------------- | ----------- | ---------------- |
-| 0     | Discovery and architecture proposal | Not started |                  |
-| 1     | Project foundation                  | Not started |                  |
-| 2     | Tokens and Ant Design theme         | Not started |                  |
-| 3     | Theme runtime, persistence and JSON | Not started |                  |
-| 4     | SignFlow wrappers                   | Not started |                  |
-| 5     | Preview page and theme editor       | Not started |                  |
-| 6     | Quality, accessibility and docs     | Not started |                  |
+| 0     | Discovery and architecture proposal | Approved    | Approved by user |
+| 1     | Project foundation                  | Completed   | Passed typecheck, build, test, lint |
+| 2     | Tokens and Ant Design theme         | Completed   | Approved by user; token & adapter tests pass |
+| 3     | Theme runtime, persistence and JSON | Completed   | Runtime, storage, JSON schema validation tests pass |
+| 4     | SignFlow wrappers                   | Completed   | SFButton, SFText, SFCard built with tests; docs in README |
+| 5     | Preview page and theme editor       | Completed   | Custom gallery and live theme editor with JSON import/export |
+| 6     | Quality, accessibility and docs     | Completed   | Audit, a11y labels, README documentation, all checks pass |
 
 ## How to use this guide
 
